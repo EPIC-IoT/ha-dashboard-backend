@@ -19,6 +19,7 @@ _/v1/sensing-unit/{:id}/data_
 
 - For the sensing unit hardware to send data to server.
 - Method: POST
+- Path Variable: _id_ (string)
 - Request Body:
 
 ```json
