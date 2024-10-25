@@ -1,0 +1,38 @@
+model Farm {
+  id        Int      @id @default(autoincrement())
+  name      String
+  location  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Farm Farm @relation(fields: [farmId], references: [id])
+}
+
+model SensingUnit {
+  id        Int      @id @default(autoincrement())
+  name      String
+  type      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Farm Farm @relation(fields: [farmId], references: [id])
+}
+
+model Sensor {
+  id            Int      @id @default(autoincrement())
+  name          String
+  sensingUnitId Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  SensingUnit SensingUnit @relation(fields: [sensingUnitId], references: [id])
+}

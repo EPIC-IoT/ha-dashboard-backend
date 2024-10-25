@@ -1,0 +1,38 @@
+{
+  "name": "dashboard-backend",
+  "version": "1.0.0",
+  "description": "Backend for the Dashboard project",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build && node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Varun Gujarathi",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^3.0.0",
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.6",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0",
+    "jest": "^27.0.6",
+    "nodemon": "^3.1.7",
+    "prisma": "^5.20.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
