@@ -2,7 +2,10 @@
   "name": "dashboard-backend",
   "version": "1.0.0",
   "description": "Backend for the Dashboard project",
-  "main": "dist/index.js",
+  "main": "build/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "npm run build && node build/index.js",
     "dev": "nodemon src/index.ts",
